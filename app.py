@@ -47,6 +47,7 @@ def stream_data():
         temp_data['geometry']['coordinates'] = item['coordinates']['coordinates']
         temp_data['properties']['name'] = item['text']
         new_data.append(temp_data)
+        
     global prev_list
     if prev_list == []:
         prev_list = new_data[:]
