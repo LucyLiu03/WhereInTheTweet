@@ -4,6 +4,7 @@ from info import data
 from twitter import main
 import threading
 
+
 class Thread (threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
@@ -11,6 +12,8 @@ class Thread (threading.Thread):
     def run(self):
         main()
 
+
+# create application
 app = Flask(__name__)
 prev_list = list()
 
@@ -47,7 +50,6 @@ def stream_data():
         temp_data['geometry']['coordinates'] = item['coordinates']['coordinates']
         temp_data['properties']['name'] = item['text']
         new_data.append(temp_data)
-        
     global prev_list
     if prev_list == []:
         prev_list = new_data[:]
