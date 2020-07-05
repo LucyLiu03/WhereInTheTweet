@@ -18,7 +18,7 @@ function getJson(){
         lastData.append(data);
         data = lastData;
       }
-      map.removeLayer(geoJsonLayer);
+      //map.removeLayer(geoJsonLayer);
       geoJsonLayer = L.geoJson(data, {onEachFeature: popUp});
       geoJsonLayer.addTo(map);
   });
