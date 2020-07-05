@@ -14,13 +14,13 @@ if (feature.properties){
 
 function getJson(){
   $.getJSON(url, function(data){
-      if(data.length < 30){
+      if(data.length < 15){
         lastData.append(data);
         data = lastData;
       }
       //map.removeLayer(geoJsonLayer);
-      geoJsonLayer = L.geoJson(data, {onEachFeature: popUp});
-      geoJsonLayer.addTo(map);
+      //geoJsonLayer = L.geoJson(data, {onEachFeature: popUp});
+      //geoJsonLayer.addTo(map);
   });
 }
 
